@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.shortcuts import reverse
 # Create your models here.
 
 class Category(models.Model):
@@ -19,6 +19,10 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
+
+    def get_absolute_url(self):
+        return reverse('catalog', kwargs={'slug': self.slug})
+
 
 class Goods(models.Model):
     name = models.CharField('Название', max_length=30)

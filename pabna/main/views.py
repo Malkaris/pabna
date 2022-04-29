@@ -36,3 +36,8 @@ def shop(request):
 def contacts(request):
     content = mixin()
     return render(request, 'main/contacts.html', content)
+
+
+def catalog(request):
+    content = mixin()
+    return render(request, content)

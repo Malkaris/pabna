@@ -3,18 +3,13 @@
 Pabna | Shop
 {% endblock %}
 {% block content %}
-<!-- breadcrumb-area start -->
+		<!-- breadcrumb-area start -->
 		<div class="breadcrumb-area">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="breadcrumb-list">
-							<h1>Shop Categories</h1>
-							<ul>
-								<li><a href="index.html">home</a> <span class="divider">|</span></li>
-								<li><a href="shop.html">Category</a> <span class="divider">|</span></li>
-								<li><a href="#">Shop</a></li>
-							</ul>							
+							<h1>{{ category.name }}</h1>
 						</div>
 					</div>
 				</div>
@@ -231,13 +226,13 @@ Pabna | Shop
 							<div class="tab-content">
 								<div role="tabpanel" class="tab-pane active" id="home">
 									<div class="row">
+										{% for product in goods %}
 										<!-- single-product start -->
 										<div class="col-md-4 col-sm-4">
 											<div class="single-product">
 												<div class="product-img">
 													<a href="product-details.html">
-														<img src="img/product/1.jpg" alt="" />
-														<img class="secondary-img" src="img/product/2.jpg" alt="" />
+														<img src="{{ product.image }}" alt="" />
 													</a>
 													<span class="tag-line">new</span>
 													<div class="product-action">
@@ -251,421 +246,15 @@ Pabna | Shop
 													</div>
 												</div>
 												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
+													<h3><a href="{{ product.slug }}">{{ product.name }}</a></h3>
 													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
+														<span>${{ product.price }}</span>
 													</div>
 												</div>
 											</div>
 										</div>
 										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/3.jpg" alt="" />
-														<img class="secondary-img" src="img/product/11.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/4.jpg" alt="" />
-														<img class="secondary-img" src="img/product/11.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/5.jpg" alt="" />
-														<img class="secondary-img" src="img/product/6.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/7.jpg" alt="" />
-														<img class="secondary-img" src="img/product/8.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/9.jpg" alt="" />
-														<img class="secondary-img" src="img/product/10.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/11.jpg" alt="" />
-														<img class="secondary-img" src="img/product/12.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/23.jpg" alt="" />
-														<img class="secondary-img" src="img/product/22.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/21.jpg" alt="" />
-														<img class="secondary-img" src="img/product/20.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/19.jpg" alt="" />
-														<img class="secondary-img" src="img/product/18.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/13.jpg" alt="" />
-														<img class="secondary-img" src="img/product/14.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/14.jpg" alt="" />
-														<img class="secondary-img" src="img/product/15.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/16.jpg" alt="" />
-														<img class="secondary-img" src="img/product/17.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/18.jpg" alt="" />
-														<img class="secondary-img" src="img/product/11.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->	
-										<!-- single-product start -->
-										<div class="col-md-4 col-sm-4">
-											<div class="single-product">
-												<div class="product-img">
-													<a href="product-details.html">
-														<img src="img/product/7.jpg" alt="" />
-														<img class="secondary-img" src="img/product/11.jpg" alt="" />
-													</a>
-													<span class="tag-line">new</span>
-													<div class="product-action">
-														<div class="button-top">
-															<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-															<a href="#" ><i class="fa fa-heart"></i></a>
-														</div>
-														<div class="button-cart">
-															<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-														</div>
-													</div>
-												</div>
-												<div class="product-content">
-													<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-													<div class="price">
-														<span>$80.00</span>
-														<span class="old">$90.11</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- single-product end -->										
+										{% endfor %}
 									</div>
 								</div>
 								<div role="tabpanel" class="tab-pane" id="profile">
@@ -1006,5 +595,4 @@ Pabna | Shop
 			</div>
 		</div>
 		<!-- brand-area end -->
-		
 		{% endblock %}

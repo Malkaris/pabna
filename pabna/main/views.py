@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import *
 
 
@@ -12,7 +12,6 @@ def mixin():
     return content
 
 
-# Create your views here.
 def index(request):
     content = mixin()
     return render(request, 'main/index.html', content)
@@ -33,11 +32,20 @@ def shop(request):
     return render(request, 'main/shop.html', content)
 
 
-def contacts(request):
+def contact(request):
     content = mixin()
-    return render(request, 'main/contacts.html', content)
+    return render(request, 'main/contact.html', content)
 
 
-def catalog(request):
+def catalog(request, slug):
     content = mixin()
-    return render(request, content)
+    content['category'] = get_object_or_404(Category, slug=slug)
+    return render(request, 'main/shop.html', content)
+
+
+def subcategory(request, category_slug, subcategory_slug):
+    content = mixin()
+    category = get_object_or_404(Category, slug=subcategory_slug)
+    content['category'] = category
+    content['goods'] = Goods.objects.filter(category_id=category.id)
+    return render(request, 'main/shop.html', content)
